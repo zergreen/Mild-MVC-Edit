@@ -1,0 +1,36 @@
+<%- include("../layouts/header") %>
+<div class="container">
+  <br>
+  <a href ="http://localhost:3000/">
+    <button class="button1 buttonstyle2">< ย้อนกลับ</button>
+  </a>
+
+  <br><br>
+  <!--ส่วนแสดงตาราง (แสดงrecord ในดาต้าเบส)-->
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="table-danger">
+        <tr>
+          <th>ID</th>
+          <th>TIME-CPU</th>
+          <th>CORE-CPU</th>
+          <!-- <th>Action</th> -->
+        </tr>
+      </thead>
+      <!--หัวตาราง-->
+        <% if (data) { %> <% data.forEach(function(a){ %>
+        <tr>
+          <td ><%= a.id %></td>
+          <td ><%= a.time_cpu %></td>
+          <td ><%= a.core_cpu %></td>
+          <td>
+        
+            </td>
+          </tr>
+          <% }) %> <% } %>
+        <!--Record ตาราง-->
+      </table>
+    </div>
+  </table>
+</div>
+<%- include("../layouts/footer") %>

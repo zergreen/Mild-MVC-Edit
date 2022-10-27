@@ -1,0 +1,32 @@
+{
+  "name": "student-app",
+  "version": "1.0.0",
+  "description": "npm install express \r npm install cors\r npm install helmet\r npm install mysql",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "bootstrap-icons": "^1.9.1",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "helmet": "^6.0.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/nisa1681/student-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/nisa1681/student-app/issues"
+  },
+  "homepage": "https://gitlab.com/nisa1681/student-app#readme"
+}

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="d-flex bd-highlight mb-3">
+    <div class="p-2 bd-highlight"></div>
+  </div>
+  <!--ใช้สำหรับ Input โดยยิง api /createCPU-->
+  <form method="post" action="/createCpu">
+    <fieldset>
+      <legend><b>Input:</b></legend>
+      <div class="row g-3">
+        <div class="col">
+          <!--ระบุค่าลงใน Database-->
+          <label for="time_cpu" class="form-label"><b>Time CPU:</b></label>
+          <input type="text" id="time_cpu" name="time_cpu" class="form-control"/>
+        </div>
+
+        <div class="col">
+          <!--ระบุค่าลงใน Database-->
+          <label for="core_cpu" class="form-label"><b>Core CPU:</b></label>
+          <input type="text" id="core_cpu" name="core_cpu" class="form-control"/>
+        </div>
+      </div><br />
+
+      <input type="submit" value="Submit" class="button2 buttonstyle1"/> 
+    </fieldset>
+  </form>
+  <br />
+  <hr>
+  <br />
+
+  <!--แสดงดาต้าเบส-->
+  <form action="/getCpu">
+    <input type="submit" class="button1 buttonstyle2" value="View Database" />
+  </form>
+
+  <!--แสดงผลลัพธ์รายการที่มากที่สุด-->
+  <form action="/getMax">
+    <input type="submit" class="button2 buttonstyle2" value="Show Max" />
+  </form>
+</div>

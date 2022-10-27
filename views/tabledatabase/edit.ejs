@@ -1,0 +1,35 @@
+<%- include("../layouts/header") %>
+
+<div class="container">
+  <form method="post" action="/updateCpu/<%= id %>">
+    <fieldset>
+      <div class="row g-3">
+        <div class="col">
+          <!--ระบุค่าลงใน Database-->
+          <label for="time_cpu" class="form-label"><b>Id CPU:</b></label>
+          <input type="text" id="id" name="id" value="<%= id %> " class="form-control"/>
+        </div>
+  
+        <div class="col">
+          <!--ระบุค่าลงใน Database-->
+          <label for="time_cpu" class="form-label"><b>Time CPU:</b></label>
+          <input type="text" id="time_cpu" name="time_cpu" value="<%= time_cpu %> " class="form-control"/>
+
+        </div>
+  
+        <div class="col">
+          <!--ระบุค่าลงใน Database-->
+          <label for="core_cpu" class="form-label"><b>Core CPU:</b></label>
+          <input type="text" id="core_cpu" name="core_cpu" value="<%= core_cpu %> " class="form-control"/>
+
+        </div>
+      </div><br />
+  
+      <input type="submit" value="Submit" class="button2 buttonstyle1"/> 
+    </fieldset>
+
+    <input type="hidden" name="_method" value="PUT">
+  </form>
+</div>
+
+<%- include("../layouts/footer") %>
