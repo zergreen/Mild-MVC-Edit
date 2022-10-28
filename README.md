@@ -1,3 +1,6 @@
 # MVC-CPU
 
-for testing 
+    cd MVC-CPU
+    code .
+    npm i
+    npm start
