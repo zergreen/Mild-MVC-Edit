@@ -78,19 +78,28 @@ class Plugin {
   //แก้ไขข้อมูลใน Database
   updateCpuPlugin = (cputable, res) => {
     let sql = `UPDATE cputable
-        SET id = ?, time_cpu = ?, core_cpu = ?
+        SET time_cpu = ?, core_cpu = ?
         WHERE id = ?`;
+
+    // console.table(cputable);
 
     connection.query(
       sql,
-      [cputable.id, cputable.time_cpu, cputable.core_cpu],
-      function (err) {
+      [cputable.time_cpu, cputable.core_cpu, cputable.id],
+      function (err, data) {
         if (err) {
           console.log("error");
+          console.log(err);
         } else {
           console.log("update finished");
+          console.log();
+          // console.log();
+          // return res.status(201).render("tabledatabase/list", {
+          //   response: data,
+          // });
+          // res.redirect("tabledatabase/list");
+          return res.status(201).redirect("/getCpu");
           // return res.status(201).send({ response: "update finished" });
-          res.redirect("tabledatabase/list");
         }
       }
     );

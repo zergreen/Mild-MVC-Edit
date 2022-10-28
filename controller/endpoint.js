@@ -33,10 +33,15 @@ class Endpoint {
 
   //แก้ไขข้อมูลใน Database
   updateEndpoint = (req, res) => {
-    console.log("i comming to put");
+    console.log("i comming to green");
+    // var id = req.params.id;
     this.dataCpu.id = req.params.id;
     this.dataCpu.time_cpu = req.body.time_cpu;
     this.dataCpu.core_cpu = req.body.core_cpu;
+
+    // console.table(this.dataCpu);
+    // console.log("5555555555");
+
     new Logic().updateLogic(this.dataCpu, res);
   };
 

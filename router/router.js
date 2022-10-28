@@ -12,7 +12,7 @@ router.post("/createCpu", new Endpoint().createEndpoint);
 router.post("/deleteCpu/:id", new Endpoint().deleteEndpoint);
 
 //แก้ไขข้อมูล
-router.put("/updateCpu/:id", new Endpoint().updateEndpoint);
+router.post("/updateCpu/:id", new Endpoint().updateEndpoint);
 
 //รับข้อมูล Record ทั้งหมด
 router.get("/getCpu", new Endpoint().getEndpoint);
